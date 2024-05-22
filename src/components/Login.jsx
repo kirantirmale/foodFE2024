@@ -72,8 +72,6 @@ function Login() {
       navigate("/login")
     }
   }, []);
-
-
   return (
     < >
       <section class=" gradient-form" Style="background-color: #eee;">
