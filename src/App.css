@@ -77,8 +77,11 @@ Link {
     display: block;
   }
 }
-
-.card {
+.maincard{
+  width: 28%;
+  margin: auto;
+}
+.cardd{
   cursor: grab;
 }
 .load{
@@ -90,12 +93,7 @@ Link {
   margin: auto;
 }
 
-.conf {
-  transform: translate(150%, 10%);
-  /* width: 25%; */
-  margin: auto;
 
-}
 
 /* .....................login................... */
 .Home {

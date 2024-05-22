@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import confetti from 'canvas-confetti';
-
+const api = 'food-be-2024-bl4dghnrb-kirantirmales-projects.vercel.app'
 function Login() {
 
   const navigate = useNavigate();

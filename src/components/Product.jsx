@@ -128,7 +128,7 @@ const Example = (props) => {
 
                 <div className="container p-2">
                     <div>
-                        <div className='text-center flex flex-col gap-5 py-3 wii '>
+                        <div className='text-center flex flex-col gap-5 py-3 wii'>
                             <p className="bgcolor text-black p-1 w-48 text-center rounded-md m-auto">Awesome Products</p>
                             <input
                                 type="text"
@@ -193,7 +193,7 @@ const Example = (props) => {
                     <div className="popup">
                         {selectedCard && (
                             <Box className='col mb-2 ' >
-                                <Card sx={{ width: 290 }} className='m-auto md:mt-10 card' >
+                                <Card sx={{ width: 290 }} className='m-auto md:mt-10 cursor-grab' >
                                     <div>
                                         <Typography level="title-lg "><h5>{selectedCard.name}  </h5> </Typography>
                                         <Typography level="body-sm" >{selectedCard.description}</Typography>
@@ -220,8 +220,8 @@ const Example = (props) => {
                 </Modal>
 
                 <Modal open={confirmOrder} onClose={() => setConfirmOrder(false)}>
-                    <div className="fixed inset-0   flex items-center justify-center z-50 conf">
-                        <div className="bg-black text-white w-80  rounded-lg p-3">
+                    <div className="maincard  items-center justify-center z-50 ">
+                        <div className="bg-black text-white   rounded-lg p-3 ">
                             {selectedCard && (
                                 <div>
                                     <h2 className="text-lg font-bold mb-4">Confirm ({selectedCard.name}) Order</h2>
@@ -241,15 +241,15 @@ const Example = (props) => {
                                 >
                                     Confirm😎
                                 </Button>
-                                <Button variant="contained" className='mr-2' onClick={handleCancelOrder}>Cancel Order 😥 </Button>
                                 <Button variant="contained" onClick={handleViewScanner}><i className="fa-solid fa-eye"></i> View Scanner</Button>
+                                <Button variant="contained" className='mr-2' onClick={handleCancelOrder}>Cancel Order 😥 </Button>
                             </div>
                         </div>
                     </div>
                 </Modal>
 
                 <Modal open={scannerPopup} onClose={handleCloseScannerPopup}>
-                    <div className="fixed inset-0 flex items-center justify-center z-50 conf">
+                    <div className="maincard z-50 mt-20">
                         <div className="bg-white w-80 rounded-lg p-3">
                             <h2 className="text-lg font-bold mb-4">Scan And Pay 💲</h2>
                             {selectedCard && (
