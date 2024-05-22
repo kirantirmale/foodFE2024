@@ -13,10 +13,15 @@ const Header = () => {
     setMobileOpen(!mobileopen)
   }
 
-
+  const handleLogout = () => {
+    // Remove token from localStorage
+    localStorage.removeItem('token');
+    // Redirect to home page or login page
+    window.location.href = '/'; // Redirect to home page
+  };
 
   const drwer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }} >
       <Typography
         color={'goldenrod'}
         variant='h6'
@@ -43,24 +48,19 @@ const Header = () => {
         <li>
           <NavLink to={"/admin"}>Admin</NavLink >
         </li>
+        <li>
+          <NavLink onClick={handleLogout}>LogOut</NavLink>
+        </li>
+
       </ul>
     </Box>
   )
   return (
     <>
-      <Box>
+
+      <Box className='w-full top-0 relative ' >
         <AppBar component={"nav"} sx={{ bgcolor: "black" }} >
           <Toolbar>
-            <IconButton color='inherit'
-              edge="start"
-              sx={{
-                mr: 2,
-                display: { sm: "none" },
-              }}
-              onClick={handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
 
             <Typography
               color={'goldenrod'}
@@ -71,6 +71,19 @@ const Header = () => {
               <FastfoodIcon />
               HAPPY FOODIE
             </Typography>
+            <IconButton
+              color=''
+              sx={{
+                mr: 2,
+                display: { sm: "none" },
+                width:'35px',
+                border: '1px solid', // Adds a border
+                borderRadius: '5px', // Adds rounded corners
+              }}
+              onClick={handleDrawerToggle}
+            >
+              <i className="fa-solid fa-bars text-white"></i>
+            </IconButton>
 
             <Divider />
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -87,9 +100,12 @@ const Header = () => {
                 <li>
                   <NavLink to={"/contact"}>Contact</NavLink>
                 </li>
-                
+
                 <li>
                   <NavLink to={"/adminpannel"}>Admin</NavLink>
+                </li>
+                <li>
+                  <NavLink onClick={handleLogout}>LogOut</NavLink>
                 </li>
 
               </ul>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
-
+import confetti from 'canvas-confetti';
 
 function Login() {
 
@@ -26,9 +26,14 @@ function Login() {
   }
 
   const save = async (x) => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
 
+  });
     x.preventDefault()
-    
+
     if (obj.email == '' || obj.password == '') {
       swal({
         title: 'Email or Password is requride'
@@ -49,7 +54,7 @@ function Login() {
       body: JSON.stringify(obj)
     };
 
-    let responce = await fetch(`${url}/api/auth/login`, requestOptions).then((res) => { return res.json() })
+    let responce = await fetch(`http://localhost:4000/api/auth/login`, requestOptions).then((res) => { return res.json() })
 
     if (responce.status == true) {
       localStorage.setItem('token', responce.token)
@@ -81,7 +86,7 @@ function Login() {
                     <div class="card-body p-md-5 mx-md-4">
 
                       <div class="text-center">
-                        
+
                         <h4 class="mt-1 mb-5 pb-1">Welcome To My Website</h4>
                       </div>
 
@@ -109,15 +114,19 @@ function Login() {
                         </div>
 
                         <div class="text-center pt-1 mb-5 pb-1">
-                          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" onClick={save}>Log
-                            in</button>
-                          <a class="text-muted" href="#!">Forgot password?</a>
+                          <button class="btn btn-primary btn-block fa-lg bg-gradient-to-r from-blue-500 to-indigo-500 mb-3 w-full py-2 text-white" type="submit" onClick={save}>
+                            Log in
+                          </button>
+                          {/* <a class="text-gray-600" href="#!">Forgot password?</a> */}
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                          <p class="mb-0 me-2">Don't have an account?</p>
-                          <button type="button" class="btn btn-outline-danger"><Link to="/signup" class="btn ">Signup</Link></button>
+                        <div class="flex items-center justify-center pb-4">
+                          <p class="mb-0 mr-2">Don't have an account?</p>
+                          <button class="btn btn-primary btn-block fa-lg bg-gradient-to-r from-blue-500 to-indigo-500 mb-3 w-full py-2 text-white" type="submit" >
+                          <Link to="/signup" className="text-white font-bold no-underline" >Signup</Link>
+                          </button>
                         </div>
+
 
                       </form>
                     </div>

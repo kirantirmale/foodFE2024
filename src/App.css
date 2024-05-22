@@ -1,7 +1,7 @@
-
-Link{
+Link {
   text-decoration: underline;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,14 +32,95 @@ Link{
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
- 
+@media (max-width: 767.98px) {
+  .mobile-mt-10 {
+    margin-top: 60px !important;
+  }
 
-  /* .....................login................... */
+}
+
+@media (min-width: 767.98px) {
+  .hide {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .con {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .con {
+    width: 100%;
+    margin: auto;
+    /* display: flex !important; */
+  }
+}
+
+@media (min-width: 320px) {
+  .flexx {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 319.98px) {
+  .hide {
+    display: block;
+  }
+}
+
+.card {
+  cursor: grab;
+}
+.load{
+  margin-top: 150px;
+}
+.popup {
+  margin-top: 160px !important;
+  width: 320px;
+  margin: auto;
+}
+
+.conf {
+  transform: translate(150%, 10%);
+  /* width: 25%; */
+  margin: auto;
+
+}
+
+/* .....................login................... */
+.Home {
+  background-size: cover;
+  background-position: center;
+  transition: background-image 3s ease-in-out;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: auto !important;
+}
+.wii{
+  width: 50% !important;
+  margin: auto;
+}
+.headerContainer {
+  /* background-color: rgba(161, 147, 147, 0.5);  */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+
 
 .container1 {
   font-family: Arial, sans-serif;
@@ -50,7 +131,7 @@ Link{
   min-height: 100vh;
 }
 
-.form1{
+.form1 {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -63,50 +144,43 @@ label {
   font-weight: bold;
 }
 
-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
-  width: 100%;
-}
 
 button {
-  background-color: #007bff;
+  background-color: #0a0a0a !important;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
-  width: 100%;
+
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-  /* .....................signup................... */
+/* .....................signup................... */
 
 
 .gradient-custom-3 {
   /* fallback for old browsers */
   background: #84fab0;
-  
+
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-  
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-  }
-  .gradient-custom-4 {
+}
+
+.gradient-custom-4 {
   /* fallback for old browsers */
   background: #84fab0;
-  
+
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
-  
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-  }
-
+}
