@@ -76,12 +76,12 @@ function Login() {
     < >
       <section class=" gradient-form" Style="background-color: #eee;">
         <div class="container1 py-5">
-          <div class="row d-flex justify-content-center align-items-center ">
+          <div class="row d-flex justify-content-center align-items-center  m-auto">
             <div class="col-xl-10">
               <div class="card rounded-3 text-black">
                 <div class="row g-0">
                   <div class="col-lg-6">
-                    <div class="card-body p-md-5 mx-md-4">
+                    <div class="card-body p-md-5 mx-md-4 m-auto">
 
                       <div class="text-center">
 
