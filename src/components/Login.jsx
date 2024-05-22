@@ -88,7 +88,7 @@ function Login() {
                         <h4 class="mt-1 mb-5 pb-1">Welcome To My Website</h4>
                       </div>
 
-                      <form className="form1">
+                      <form className="form1 m-auto">
                         <p>Please login to your account</p>
 
                         <div class="form-outline mb-4">
